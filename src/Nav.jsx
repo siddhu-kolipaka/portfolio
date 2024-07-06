@@ -20,13 +20,13 @@ const Nav = () => {
   let location = useLocation();
 
   return (
-    <header className="w-full py-4 z-50 flex justify-between items-center fixed">
+    <header className="w-full py-4 z-50 flex  justify-between items-center fixed">
       <Magnetic cls="text-white m-4 text-xl">
-        <Link to="/" className="text-white m-4 text-xl">
+        <Link to="/" className="text-white text-xl">
           Code by Sid
         </Link>
       </Magnetic>
-      <nav className="mr-12 flex gap-5">
+      <nav className="mr-12 flex sm:gap-5">
         {links.map((link, index) => {
           return (
             <Magnetic cls="" key={`aa${index}`}>
