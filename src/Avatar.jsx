@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const Avatar = () => {
   return (
     <>
-      <div className="text-white h-screen text-7xl font-black flex flex-col justify-center items-center gap-0">
+      <div className="text-white overflow-hidden w-screen h-screen text-7xl font-black flex flex-col justify-center items-center gap-0">
         <Marquee className="overflow-hidden  " autoFill="true">
           FRIENDLY.
         </Marquee>

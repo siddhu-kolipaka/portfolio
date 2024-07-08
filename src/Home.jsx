@@ -16,9 +16,9 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Stairs />
-      <div className="w-full h-screen overflow-hidden relative" id="home">
+      <div className="w-screen h-screen overflow-hidden relative" id="home">
         <Avatar />
         <Hamburger handleHamburger={handleHamburger} IsActive={IsActive} />
         {IsActive && <Navbar />}
@@ -27,7 +27,7 @@ const Home = () => {
       <Skill />
       <Service />
       <Details />
-    </>
+    </div>
   );
 };
 export default Home;

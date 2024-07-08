@@ -19,7 +19,7 @@ const Con3 = forwardRef(({ isVisible }, ref) => {
           Experience
         </div>
         <div className="text-xl my-6">
-          <pre>
+          <p>
             What can I say?
             <br />
             Im still too young to talk about this section.
@@ -32,7 +32,7 @@ const Con3 = forwardRef(({ isVisible }, ref) => {
             (Let's make epic shit!)
             <br />
             (Actually the dev wants help to put something in the work section)
-          </pre>
+          </p>
         </div>
       </motion.div>
     )

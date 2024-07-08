@@ -61,12 +61,18 @@ const Skill = () => {
       <motion.div
         ref={targetRef}
         style={{ right: mov }}
-        className="text-7xl font-extrabold text-end relative top-16 right-0 "
+        className="text-6xl sm:text-7xl font-extrabold text-end relative top-16 right-0 mr-8"
       >
         More info
       </motion.div>
-      <motion.div style={{ y: mov2 }} className="flex gap-10 px-36 pt-[20vh] ">
-        <motion.div ref={ref} className="flex flex-col gap-6 ">
+      <motion.div
+        style={{ y: mov2 }}
+        className="sm:flex gap-10 pt-[12vh] sm:px-36 sm:pt-[20vh] "
+      >
+        <motion.div
+          ref={ref}
+          className=" grid grid-cols-2  sm:grid-cols-1 justify-items-center place-items-center"
+        >
           {names.map((name, index) => {
             return (
               <motion.button
@@ -94,7 +100,7 @@ const Skill = () => {
           })}
         </motion.div>
         <AnimatePresence mode="popLayout">
-          <motion.div className="w-full overflow-hidden" key={num}>
+          <motion.div className="w-full pt-6 overflow-hidden" key={num}>
             {num == 0 && <Con1 ref={ref1} isVisible={!isInView1}></Con1>}
             {num == 1 && <Con2 ref={ref2} isVisible={!isInView2}></Con2>}
             {num == 2 && <Con3 ref={ref3} isVisible={!isInView3}></Con3>}

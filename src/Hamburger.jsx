@@ -6,7 +6,7 @@ const Hamburger = ({ handleHamburger, IsActive }) => {
     <>
       <motion.button
         onClick={handleHamburger}
-        className="fixed top-20 right-4 size-16 flex flex-col gap-1 justify-center items-center bg-blue-600 rounded-full"
+        className="fixed z-30 top-20 right-4 size-16 flex flex-col gap-1 justify-center items-center bg-blue-600 rounded-full"
       >
         <motion.div
           style={IsActive && { rotate: "45deg", y: 8 }}

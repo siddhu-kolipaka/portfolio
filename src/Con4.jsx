@@ -19,14 +19,15 @@ const Con4 = forwardRef(({ isVisible }, ref) => {
           About Me
         </div>
         <div className="text-xl my-6">
-          <pre>
-            You want proof? Get hold of my Aadhar card.
+          <p>
+            You want proof?
+            <br /> Get hold of my Aadhar card.
             <br />
             (You'll never find it here)
-          </pre>
+          </p>
         </div>
-        <div className="grid grid-cols-2 gap-6">
-          <div>
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div className="">
             <span className="text-blue-500 ">Name: </span>
             <span className="text-xl">Kolipaka Ram Chandra Siddharth</span>
           </div>

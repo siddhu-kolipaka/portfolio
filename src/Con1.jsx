@@ -33,7 +33,7 @@ const Con1 = forwardRef(({ isVisible }, ref) => {
             These are the languages and skills that i have acquired during 2
             years of my college.
           </div>
-          <div className="grid grid-cols-5 gap-5 w-3/6">
+          <div className="grid grid-cols-4 sm:grid-cols-5 gap-5 sm:w-3/6 justify-items-center place-items-center">
             <div className="border w-fit p-4 text-5xl rounded-xl border-blue-500 ">
               <FaHtml5 />
             </div>
