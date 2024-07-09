@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Magnetic from "./Magnetic";
-import pic from "./assets/sidpic-edited.png";
+import pic from "./assets/cubism4.jpg";
 
 import { useRef } from "react";
 import { useScroll, useTransform } from "framer-motion";
@@ -15,7 +15,7 @@ const Details = () => {
   });
   const movY = scrollYProgress;
 
-  const mov = useTransform(movY, [0, 1], ["100%", "10%"]);
+  const mov = useTransform(movY, [0, 1], ["100%", "25%"]);
   const mov2 = useTransform(movY, [0, 1], ["200px", "0px"]);
 
   return (
@@ -27,34 +27,48 @@ const Details = () => {
       >
         Connect
       </motion.div>
-      <div className=" w-4/6 flex flex-col justify-around gap-10 relative top-16 left-52">
-        <motion.div className=" overflow-hidden  border-b-2 border-blue-500 p-4 pb-16">
+      <div className=" sm:w-[80%] flex flex-col justify-around relative top-16 gap-10 sm:left-40">
+        <motion.div className=" overflow-hidden pb-28 flex flex-col sm:flex-row items-center sm:pl-32 sm:gap-10  border-b-2 border-blue-500">
           <motion.div
             style={{ top: mov2 }}
-            className="text-8xl relative flex items-center gap-10 overflow-hidden"
+            className="sm:text-8xl relative flex flex-col items-center "
           >
-            <motion.div className="w-28 h-28 rounded-full overflow-hidden inline-block">
-              <motion.img src={pic} alt="pic" />
+            <motion.div className="h-60 rounded-full overflow-hidden flex justify-center">
+              <motion.img className="h-60" src={pic} alt="pic" />
             </motion.div>
-            Let's work
           </motion.div>
-          <motion.div style={{ top: mov2 }} className="text-8xl relative">
-            together
-          </motion.div>
+          <div className="flex flex-col justify-center items-center">
+            <motion.div
+              style={{ top: mov2 }}
+              className="text-6xl sm:text-8xl relative"
+            >
+              Let's work
+            </motion.div>
+            <motion.div
+              style={{ top: mov2 }}
+              className="text-6xl sm:text-8xl relative"
+            >
+              together
+            </motion.div>
+          </div>
         </motion.div>
-        <div className=" flex gap-10 ">
+
+        <div className="pt-20 sm:pt-0 flex flex-col sm:flex-row items-center gap-4 ">
           <div className="text-2xl border-2 border-blue-500 overflow-hidden  rounded-full p-4 w-fit">
-            <motion.a className="relative" style={{ top: mov2 }}>
+            <motion.a className="relative p-4 " style={{ top: mov2 }}>
               kolipakasiddhu@gmail.com
             </motion.a>
           </div>
           <div className="border-2 text-2xl border-blue-500 overflow-hidden rounded-full p-4 w-fit">
-            <motion.a className="relative" style={{ top: mov2 }}>
+            <motion.a className="relative p-4 " style={{ top: mov2 }}>
               +91 9000416261
             </motion.a>
           </div>
         </div>
-        <motion.div className="absolute top-48" style={{ right: mov }}>
+        <motion.div
+          className={`absolute top-[50%] sm:top-[55%]`}
+          style={{ right: mov }}
+        >
           <Magnetic>
             <div className="text-white text-3xl bg-blue-700 rounded-full w-48 h-48 flex justify-center items-center">
               <Link to="/contact">Contact</Link>

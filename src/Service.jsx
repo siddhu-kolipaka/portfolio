@@ -49,7 +49,7 @@ const Service = () => {
       >
         Services
       </motion.div>
-      <div className="w-3/4 grid grid-cols-2 gap-20 relative left-48">
+      <div className="sm:w-3/4 grid sm:grid-cols-2 sm:gap-20 relative sm:left-48">
         {ser.map((serv, index) => {
           return (
             <motion.div
