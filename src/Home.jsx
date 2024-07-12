@@ -8,6 +8,7 @@ import Service from "./Service";
 import Stairs from "./Stairs";
 import { useState } from "react";
 import Hamburger from "./Hamburger";
+import { AnimatePresence } from "framer-motion";
 const Home = () => {
   const [IsActive, setIsActive] = useState(false);
 
@@ -21,7 +22,9 @@ const Home = () => {
       <div className="w-screen h-screen overflow-hidden relative" id="home">
         <Avatar />
         <Hamburger handleHamburger={handleHamburger} IsActive={IsActive} />
-        {IsActive && <Navbar />}
+        <AnimatePresence mode="wait">
+          {IsActive && <Navbar handleHamburger={handleHamburger} />}
+        </AnimatePresence>
         <Socials />
       </div>
       <Skill />
